@@ -1,0 +1,163 @@
+{
+  "title": "SOA Service Structure",
+  "description": "JSON Structure documentation for a Service-Oriented Architecture (SOA) service definition",
+  "type": "object",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "required": true,
+      "description": "Unique service identifier using URN notation (e.g. urn:service:payment-processing)"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": true,
+      "description": "Human-readable service name describing the business capability"
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": false,
+      "description": "Full description of the business function this service provides"
+    },
+    {
+      "name": "version",
+      "type": "string",
+      "required": false,
+      "description": "Semantic version of the service contract (e.g. 2.1.0)"
+    },
+    {
+      "name": "status",
+      "type": "enum [active, deprecated, retired, testing]",
+      "required": false,
+      "description": "Lifecycle status of the service in the registry"
+    },
+    {
+      "name": "interface",
+      "type": "object",
+      "required": true,
+      "description": "Technical interface specification for the service",
+      "fields": [
+        {
+          "name": "type",
+          "type": "enum [SOAP, REST, gRPC, messaging, GraphQL]",
+          "required": true,
+          "description": "Protocol used by the service interface"
+        },
+        {
+          "name": "wsdl_url",
+          "type": "string (uri)",
+          "required": false,
+          "description": "URL to the WSDL service definition (SOAP services)"
+        },
+        {
+          "name": "openapi_url",
+          "type": "string (uri)",
+          "required": false,
+          "description": "URL to the OpenAPI specification (REST services)"
+        },
+        {
+          "name": "endpoint",
+          "type": "string (uri)",
+          "required": false,
+          "description": "Service endpoint URL for direct invocation"
+        },
+        {
+          "name": "operations",
+          "type": "array",
+          "required": false,
+          "description": "List of operations this service exposes",
+          "items": {
+            "name": "string — operation name",
+            "description": "string — operation description",
+            "input_schema": "string — reference to input message schema",
+            "output_schema": "string — reference to output message schema"
+          }
+        }
+      ]
+    },
+    {
+      "name": "owner",
+      "type": "object",
+      "required": false,
+      "description": "Team or business unit responsible for this service",
+      "fields": [
+        {
+          "name": "team",
+          "type": "string",
+          "required": false,
+          "description": "Owning team name"
+        },
+        {
+          "name": "email",
+          "type": "string (email)",
+          "required": false,
+          "description": "Contact email for service owner"
+        },
+        {
+          "name": "domain",
+          "type": "string",
+          "required": false,
+          "description": "Business domain (e.g. Finance, Logistics, Customer)"
+        }
+      ]
+    },
+    {
+      "name": "sla",
+      "type": "object",
+      "required": false,
+      "description": "Service Level Agreement parameters",
+      "fields": [
+        {
+          "name": "availability",
+          "type": "number (0-100)",
+          "required": false,
+          "description": "Guaranteed uptime percentage (e.g. 99.9)"
+        },
+        {
+          "name": "response_time_ms",
+          "type": "integer",
+          "required": false,
+          "description": "Maximum acceptable response time in milliseconds"
+        },
+        {
+          "name": "rate_limit.requests",
+          "type": "integer",
+          "required": false,
+          "description": "Maximum number of requests per rate limit period"
+        },
+        {
+          "name": "rate_limit.period",
+          "type": "enum [second, minute, hour, day]",
+          "required": false,
+          "description": "Rate limit time period"
+        }
+      ]
+    },
+    {
+      "name": "dependencies",
+      "type": "array of string",
+      "required": false,
+      "description": "List of service IDs that this service depends on"
+    },
+    {
+      "name": "tags",
+      "type": "array of string",
+      "required": false,
+      "description": "Classification tags for service discovery and categorization"
+    },
+    {
+      "name": "registered_at",
+      "type": "string (date-time)",
+      "required": false,
+      "description": "ISO 8601 timestamp when the service was registered"
+    },
+    {
+      "name": "updated_at",
+      "type": "string (date-time)",
+      "required": false,
+      "description": "ISO 8601 timestamp of the last service definition update"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "title": "SOA Service Registry Entry",
+  "description": "Example of a service registered in an SOA service registry — a payment processing service using SOAP",
+  "service": {
+    "id": "urn:service:payment-processing:v2",
+    "name": "Payment Processing Service",
+    "description": "Processes payment transactions including authorization, capture, void, and refund operations for multiple payment methods.",
+    "version": "2.1.0",
+    "status": "active",
+    "interface": {
+      "type": "SOAP",
+      "wsdl_url": "https://payments.internal.example.com/PaymentService?wsdl",
+      "endpoint": "https://payments.internal.example.com/PaymentService",
+      "operations": [
+        {
+          "name": "AuthorizePayment",
+          "description": "Authorize a payment without capturing funds",
+          "input_schema": "AuthorizePaymentRequest",
+          "output_schema": "AuthorizePaymentResponse"
+        },
+        {
+          "name": "CapturePayment",
+          "description": "Capture previously authorized funds",
+          "input_schema": "CapturePaymentRequest",
+          "output_schema": "CapturePaymentResponse"
+        },
+        {
+          "name": "VoidPayment",
+          "description": "Void an authorization before capture",
+          "input_schema": "VoidPaymentRequest",
+          "output_schema": "VoidPaymentResponse"
+        },
+        {
+          "name": "RefundPayment",
+          "description": "Refund captured funds to the payment method",
+          "input_schema": "RefundPaymentRequest",
+          "output_schema": "RefundPaymentResponse"
+        }
+      ]
+    },
+    "owner": {
+      "team": "Payments Platform",
+      "email": "payments-team@example.com",
+      "domain": "Finance"
+    },
+    "sla": {
+      "availability": 99.95,
+      "response_time_ms": 2000,
+      "rate_limit": {
+        "requests": 1000,
+        "period": "minute"
+      }
+    },
+    "dependencies": [
+      "urn:service:fraud-detection:v1",
+      "urn:service:customer-profile:v3"
+    ],
+    "tags": [
+      "Finance",
+      "Payments",
+      "SOAP",
+      "Core",
+      "PCI-DSS"
+    ],
+    "registered_at": "2023-06-15T09:00:00Z",
+    "updated_at": "2026-04-01T14:30:00Z"
+  }
+}

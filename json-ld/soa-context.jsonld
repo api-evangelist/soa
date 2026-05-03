@@ -1,0 +1,66 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "soa": "https://www.oasis-open.org/committees/soa-rm/",
+    "wsdl": "https://www.w3.org/TR/wsdl20#",
+    "soap": "https://www.w3.org/TR/soap12/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "Service": {
+      "@id": "schema:Service",
+      "@type": "@id"
+    },
+    "ServiceInterface": "soa:ServiceInterface",
+    "ServiceContract": "soa:ServiceContract",
+    "ServiceRegistry": "soa:ServiceRegistry",
+    "ServiceProvider": "soa:ServiceProvider",
+    "ServiceConsumer": "soa:ServiceConsumer",
+    "EnterpriseServiceBus": "soa:EnterpriseServiceBus",
+    "ServiceOrchestration": "soa:ServiceOrchestration",
+    "ServiceChoreography": "soa:ServiceChoreography",
+    "SoapMessage": "soap:Envelope",
+    "WsdlDefinition": "wsdl:Description",
+    "ServiceOperation": "soa:Operation",
+    "ServicePolicy": "soa:Policy",
+    "ServiceSLA": "soa:ServiceLevelAgreement",
+
+    "name": "schema:name",
+    "description": "schema:description",
+    "version": "schema:version",
+    "status": "schema:status",
+    "endpoint": "schema:url",
+    "wsdlUrl": {
+      "@id": "wsdl:interface",
+      "@type": "@id"
+    },
+    "owner": {
+      "@id": "schema:provider",
+      "@type": "@id"
+    },
+    "team": "schema:department",
+    "domain": "schema:category",
+    "email": "schema:email",
+    "availability": "schema:availableAtOrFrom",
+    "responseTime": "schema:processingTime",
+    "dependencies": {
+      "@id": "soa:dependsOn",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "registeredAt": "schema:dateCreated",
+    "updatedAt": "schema:dateModified",
+    "tags": {
+      "@id": "schema:keywords",
+      "@container": "@list"
+    },
+    "interfaceType": "soa:interfaceType",
+    "operations": {
+      "@id": "soa:hasOperation",
+      "@container": "@list"
+    },
+    "inputSchema": "soa:inputSchema",
+    "outputSchema": "soa:outputSchema"
+  }
+}

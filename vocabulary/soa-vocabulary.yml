@@ -1,0 +1,144 @@
+title: SOA Vocabulary
+description: >-
+  Domain vocabulary for Service-Oriented Architecture (SOA) — covering core architectural concepts, protocols, governance patterns, and integration terminology used in enterprise SOA environments.
+created: '2026-05-02'
+modified: '2026-05-02'
+tags:
+  - SOA
+  - Enterprise Integration
+  - Web Services
+
+terms:
+  - term: Service
+    definition: >-
+      A discrete unit of business functionality exposed through a well-defined interface. In SOA, services are self-contained, loosely coupled, and reusable. They encapsulate a specific capability (e.g. payment processing, customer lookup) and can be composed to build larger workflows.
+    tags:
+      - Core Concepts
+
+  - term: Service Contract
+    definition: >-
+      The formal agreement between a service provider and consumer defining the interface, operations, data formats, policies, and SLAs. In SOAP/WS-*, the contract is expressed in WSDL. In REST, it's expressed in OpenAPI.
+    tags:
+      - Core Concepts
+      - Governance
+
+  - term: Service Interface
+    definition: >-
+      The technical specification of how to interact with a service — including the protocol, message formats, endpoint address, and authentication requirements. Interfaces are what consumers bind to, independent of implementation.
+    tags:
+      - Core Concepts
+
+  - term: Loose Coupling
+    definition: >-
+      A design principle where services minimize dependencies on each other's implementation details. Services interact through stable, versioned contracts, allowing implementation changes without breaking consumers.
+    tags:
+      - Design Principles
+
+  - term: Service Reusability
+    definition: >-
+      The ability to use the same service in multiple contexts and applications. SOA promotes designing services at the right granularity to maximize reuse across business processes and systems.
+    tags:
+      - Design Principles
+
+  - term: Enterprise Service Bus (ESB)
+    definition: >-
+      A middleware infrastructure that provides communication, transformation, and routing between services. The ESB handles protocol mediation, message transformation, routing, and service orchestration without services needing to know about each other directly.
+    tags:
+      - Infrastructure
+      - Integration
+
+  - term: Service Registry
+    definition: >-
+      A directory of available services containing metadata about each service including its contract, endpoint, owner, and policies. Used for service discovery and governance. Examples: UDDI, WSO2 Registry, IBM WebSphere Registry.
+    tags:
+      - Governance
+      - Infrastructure
+
+  - term: Service Orchestration
+    definition: >-
+      A pattern where a central coordinator (orchestrator) explicitly controls the sequence of service calls to implement a business process. The orchestrator knows the workflow and calls each service in the right order. Typically implemented with BPEL or workflow engines.
+    tags:
+      - Integration Patterns
+
+  - term: Service Choreography
+    definition: >-
+      A pattern where services coordinate via events and messages without a central coordinator. Each service knows when to execute its role based on incoming messages. More decentralized than orchestration.
+    tags:
+      - Integration Patterns
+
+  - term: SOAP (Simple Object Access Protocol)
+    definition: >-
+      An XML-based messaging protocol for exchanging structured information between services. SOAP provides a standard envelope format with header and body sections, and is often combined with WSDL for service description and WS-* standards for security and reliability.
+    tags:
+      - Protocols
+      - Standards
+
+  - term: WSDL (Web Services Description Language)
+    definition: >-
+      An XML-based language for describing the interface of a web service. WSDL 2.0 (W3C) defines the service's operations, message formats, and endpoint addresses. Consumed by service clients to auto-generate stubs and proxies.
+    tags:
+      - Standards
+      - Protocols
+
+  - term: WS-* Standards
+    definition: >-
+      A family of web service standards extending SOAP including WS-Security (message-level security), WS-ReliableMessaging (guaranteed delivery), WS-Transaction (distributed transactions), and WS-Policy (policy assertions).
+    tags:
+      - Standards
+      - Protocols
+
+  - term: Service Level Agreement (SLA)
+    definition: >-
+      A formal commitment between a service provider and consumer specifying performance requirements such as availability (uptime %), response time limits, throughput, and error rates. SLAs are enforced by the ESB or API gateway.
+    tags:
+      - Governance
+      - Operations
+
+  - term: Service Composition
+    definition: >-
+      Combining multiple services to create higher-level composite services or business processes. Service composition is achieved through orchestration (centralized) or choreography (decentralized).
+    tags:
+      - Core Concepts
+      - Design Patterns
+
+  - term: Canonical Data Model
+    definition: >-
+      A common data format used throughout an enterprise to enable services to exchange information without each pair needing custom transformations. The ESB translates between local formats and the canonical model.
+    tags:
+      - Integration Patterns
+      - Data
+
+  - term: Service Virtualization
+    definition: >-
+      The practice of simulating the behavior of a service for testing purposes when the real service is unavailable, expensive to use, or not yet built. Enables parallel development and comprehensive testing.
+    tags:
+      - Testing
+      - Development
+
+  - term: UDDI (Universal Description, Discovery, and Integration)
+    definition: >-
+      A directory standard for web services enabling businesses to publish, discover, and integrate web services. UDDI was the original SOA service registry standard but has largely been superseded by REST-based registries and API catalogs.
+    tags:
+      - Standards
+      - Legacy
+
+  - term: API Gateway
+    definition: >-
+      The modern evolution of the SOA API management layer — a central entry point that handles authentication, rate limiting, transformation, routing, and observability for APIs. In SOA context, the API gateway replaced or extended ESB functionality.
+    tags:
+      - Infrastructure
+      - Modern SOA
+
+  - term: Domain-Driven Design (DDD)
+    definition: >-
+      An approach to software design that aligns the service model with the business domain. In SOA and microservices, DDD Bounded Contexts help define service boundaries to achieve right-sized, cohesive services.
+    tags:
+      - Design Principles
+      - Architecture
+
+  - term: Service Versioning
+    definition: >-
+      The practice of managing multiple versions of a service contract simultaneously to allow consumers to migrate at their own pace. Common strategies include URL versioning (/v1/, /v2/), header versioning, and content negotiation.
+    tags:
+      - Governance
+      - Lifecycle
