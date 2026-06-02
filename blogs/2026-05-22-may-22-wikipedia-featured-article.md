@@ -1,0 +1,8 @@
+---
+title: May 22 Wikipedia featured article
+url: https://en.wikipedia.org/wiki/Special:FeedItem/featured/20260522000000/en
+date: '2026-05-22'
+author: ''
+feed_url: https://en.wikipedia.org/w/api.php?action=featuredfeed&feed=featured&feedformat=atom
+---
+Proboscis of a male Intraproboscis sanghae Intraproboscis is a genus in Acanthocephala (thorny-headed or spiny-headed parasitic worms) containing a single species. Found in Central Africa, it infests the black-bellied pangolin and the tree pangolin , which are both threatened with extinction . Female worms reach up to 180 mm (7.1 in) long (mostly trunk ) and 2 mm (0.079 in) wide; males seem to be smaller. The body consists of a long, narrow trunk and a tubular proboscis covered with hooks (pictured) , used for feeding and attachment. The life cycle of I. sanghae remains unknown but it likely involves a complex life cycle with at least two hosts, the pangolin and one believed to be an arthropod , such as an insect. Within this host, the larvae develop into an infectious stage called a cystacanth. When a vertebrate consumes the intermediate host, the cystacanths enter the intestines where they mature. The worm's eggs are expelled and hatch into new larvae. Infestation by I. sanghae can cause intestinal perforation and death in the black-bellied pangolin. ( Full article... ) Recently featured: 2006 Football League Championship play-off final Maryland and Virginia Rifle Regiment Silverthrone Caldera Archive By email More featured articles About
