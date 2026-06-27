@@ -40,11 +40,11 @@ common:
     url: https://www.w3.org/TR/wsdl20/
   - type: OASIS SOA Reference Model
     url: https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=soa-rm
-  - type: JSON-LD Context
+  - type: JSONLDContext
     url: json-ld/soa-context.jsonld
-  - type: JSON Schema
+  - type: JSONSchema
     url: json-schema/soa-service-schema.json
-  - type: JSON Structure
+  - type: JSONStructure
     url: json-structure/soa-service-structure.json
   - type: Vocabulary
     url: vocabulary/soa-vocabulary.yml
