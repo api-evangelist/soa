@@ -32,6 +32,10 @@ apis:
         url: https://www.w3.org/TR/wsdl20/
 
 common:
+  - type: VulnerabilityDisclosure
+    url: security/soa-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/soa-domain-security.yml
   - type: Reference Documentation
     url: https://en.wikipedia.org/wiki/Service-oriented_architecture
   - type: W3C SOAP Specification
