@@ -26,7 +26,7 @@ tags:
   - API Design
 created: '2025'
 modified: '2026-05-02'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: soa:soa-governance
     name: SOA Governance and Registry
