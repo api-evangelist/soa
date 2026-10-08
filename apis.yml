@@ -57,6 +57,12 @@ apis:
         url: https://www.w3.org/TR/wsdl20/
 
 common:
+  - type: Plans
+    url: plans/soa-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/soa-rate-limits.yml
+  - type: FinOps
+    url: finops/soa-finops.yml
   - type: Website
     url: https://www.w3.org/
   - type: VulnerabilityDisclosure
